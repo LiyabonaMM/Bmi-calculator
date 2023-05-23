@@ -1,24 +1,26 @@
+
 function workoutBMI() {
-  // Get input values
-  const theWeightInputw = document.getElementById('weight');
+  // Input values
+  const weightInputw = document.getElementById('weight');
   const heightInputh = document.getElementById('height');
-  const weight = parseFloat(theWeightInputw.value);
+  const weight = parseFloat(weightInputw.value);
   const height = parseFloat(heightInputh.value) / 100; // Convert height to meters
 
   // Calculate BMI
   const bmi = weight / (height * height);
 
-  // Display the result
-  const myBmiResults = document.getElementById('bmi');
-  myBmiResults.textContent = bmi.toFixed(2);
-  myBmiResults.parentNode.style.display = 'block';
+  // The results
+  const theBmiResults = document.getElementById('bmi');
+  theBmiResults.textContent = bmi.toFixed(2);
+  theBmiResults.parentNode.style.display = 'block';
 
-  // Check overweight status
-  const theStatusResult = document.getElementById('status');
+  // Checking The overweight status
+  const theStatusResults = document.getElementById('status');
   if (bmi >= 25) {
-    theStatusResult.textContent = 'Overweight';
+    theStatusResults.textContent = 'Overweight 😔';
   } else {
-    theStatusResult.textContent = 'Not overweight';
+    theStatusResults.textContent = 'Not Overweight 😄';
   }
-  theStatusResult.parentNode.style.display = 'block';
+  theStatusResults.parentNode.style.display = 'block';
 }
+
